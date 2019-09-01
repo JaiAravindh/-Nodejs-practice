@@ -1,0 +1,9 @@
+//directory with fs module.
+
+var fs = require('fs');
+
+//making directory
+fs.mkdirSync('newDir');
+
+//removing directory
+fs.rmdirSync('newDir');
