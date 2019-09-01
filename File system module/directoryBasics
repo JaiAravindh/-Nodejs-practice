@@ -3,7 +3,13 @@
 var fs = require('fs');
 
 //making directory
-fs.mkdirSync('newDir');
+fs.mkdir('newDir', function(){
+    fs.writeFile('./newDir/newFile.txt', "Hello WOrld")
+});
 
-//removing directory
-fs.rmdirSync('newDir');
+
+//remove directory 
+fs.unlink('./newDir/mynode.txt', function() {
+    fs.rmdir('node');
+});
+
