@@ -1,10 +1,18 @@
 var fs = require('fs');
 
-//this method will allow to read our files synchronous
-var read_string = fs.readFileSync('test.txt', 'utf8');
+var read_string = fs.readFile('test.txt', 'utf8', function(err, data){
+  if (err)
+    return console.error(err);
+  else
+    return console.log(data);
+});
 
-console.log(read_string);
+console.log('the file is read');
 
-//write file synchronous
-fs.writeFileSync('test2.txt', read_string);
+fs.writeFile('test2.txt', read_string, function(err, data){
+  if (err)
+    return console.error(err);
+  else
+    return console.log(data);
+});
 
