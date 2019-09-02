@@ -15,4 +15,9 @@ readStream.on('data', function(chunk){
 			
 })
 
+readStream.on('end', function(chunk){
+	console.log('--------end------------');
+})
+
+
 
