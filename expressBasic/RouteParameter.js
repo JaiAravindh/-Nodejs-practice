@@ -28,11 +28,11 @@ var students = {
 
 app.get('/students/:id',function(req,res){
 	rep.send('you have requested to see the student id:' +req.params.id);
-}
+})
 
 app.get('/students/:id',function(req,res){
 	rep.send('you have requested to see the student name:' + students[req.params.id]);
-}
+})
 
 
 
